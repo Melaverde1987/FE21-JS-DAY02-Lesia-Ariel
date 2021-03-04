@@ -5,38 +5,38 @@ function countTime(seconds) {
     const minute = 60;
 
     var intWeek = parseInt(seconds / week);
-    if (week <= seconds) {
+    if (seconds >= week) {
         var seconds = seconds - intWeek * week;
 
         if (seconds == 0) {
-            document.getElementById("box").innerHTML = ('It is exactly ' + intWeek + ' week(s)');
+            return document.getElementById("box").innerHTML = ('It is exactly ' + intWeek + ' week(s)');
         }
     }
 
     var intDay = parseInt(seconds / day);
-    if (day <= seconds) {
+    if (seconds >= day) {
         var seconds = seconds - intDay * day;
 
         if (seconds == 0) {
-            document.getElementById("box").innerHTML = ('It is exactly ' + intDay + ' day(s)');
+            return document.getElementById("box").innerHTML = ('It is exactly ' + intDay + ' day(s)');
         }
     }
 
     var intHour = parseInt(seconds / hour);
-    if (hour <= seconds) {
+    if (seconds >= hour) {
         var seconds = seconds - intHour * hour;
 
         if (seconds == 0) {
-            document.getElementById("box").innerHTML = ('It is exactly ' + intHour + ' hour(s)');
+            return document.getElementById("box").innerHTML = ('It is exactly ' + intHour + ' hour(s)');
         }
     }
 
     var intMinute = parseInt(seconds / minute);
-    if (minute <= seconds) {
+    if (seconds >= minute) {
         var seconds = seconds - intMinute * minute;
 
         if (seconds == 0) {
-            document.getElementById("box").innerHTML = ('It is exactly ' + intMinute + ' minute(s)');
+            return document.getElementById("box").innerHTML = ('It is exactly ' + intMinute + ' minute(s)');
         }
     }
 
