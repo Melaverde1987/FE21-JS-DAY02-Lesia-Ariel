@@ -5,6 +5,22 @@ function countTime(seconds) {
     const minute = 60;
 
     var intWeek = parseInt(seconds / week);
+    var seconds = seconds - intWeek * week;
+
+    var intDay = parseInt(seconds / day);
+    var seconds = seconds - intDay * day;
+
+    var intHour = parseInt(seconds / hour);
+    var seconds = seconds - intHour * hour;
+
+    var intMinute = parseInt(seconds / minute);
+    var seconds = seconds - intMinute * minute;
+
+    document.getElementById("box").innerHTML = ('It is ' + intWeek + ' week(s) ' + intDay + ' day(s) ' + intHour + ' hour(s) ' + intMinute + ' minute(s) ' + seconds + ' seconds')
+
+
+    /*
+    var intWeek = parseInt(seconds / week);
     if (seconds >= week) {
         var seconds = seconds - intWeek * week;
 
@@ -41,7 +57,7 @@ function countTime(seconds) {
     }
 
     document.getElementById("box").innerHTML = ('It is ' + intWeek + ' week(s) ' + intDay + ' day(s) ' + intHour + ' hour(s) ' + intMinute + ' minute(s) ' + seconds + ' seconds');
-
+    */
 }
 
 var number1 = countTime(2000000);
